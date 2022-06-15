@@ -39,7 +39,8 @@ module.exports = {
     // 配置代理跨域
     proxy: {
       '/dev-api': {
-        target: 'http://39.98.123.211',
+        // target: 'http://39.98.123.211',
+        target: 'http://sph-h5-api.atguigu.cn',
         pathRewrite: { '^/dev-api': '' }
       }
     }
