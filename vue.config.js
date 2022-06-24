@@ -15,7 +15,7 @@ const name = defaultSettings.title || 'vue Admin Template' // page title
 // port = 9528 npm run dev OR npm run dev --port = 9528
 const port = process.env.port || process.env.npm_config_port || 9528 // dev port
 
-// All configuration item explanations can be find in https://cli.vuejs.org/config/
+// 所有配置项的解释都可以在 https://cli.vuejs.org/config/
 module.exports = {
   /**
    * You will need to set publicPath if you plan to deploy your site under a sub path,
@@ -58,7 +58,7 @@ module.exports = {
     }
   },
   chainWebpack(config) {
-    // it can improve the speed of the first screen, it is recommended to turn on preload
+    // 可以提高首屏速度，建议开启预加载
     config.plugin('preload').tap(() => [
       {
         rel: 'preload',
@@ -69,10 +69,10 @@ module.exports = {
       }
     ])
 
-    // when there are many pages, it will cause too many meaningless requests
+    // 当页面很多时，会导致太多无意义的请求
     config.plugins.delete('prefetch')
 
-    // set svg-sprite-loader
+    // 设置 svg-sprite-loader
     config.module
       .rule('svg')
       .exclude.add(resolve('src/icons'))
