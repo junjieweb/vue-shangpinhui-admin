@@ -89,7 +89,7 @@ const actions = {
       getInfo(state.token).then(response => {
         const { data } = response
         if (!data) {
-          return reject('Verification failed, please Login again.')
+          return reject('验证失败，请重新登录。')
         }
         commit('SET_USER_INFO', data)
         commit('SET_ROUTES', findUserAsyncRoutes(asyncRoutes, data.routes))

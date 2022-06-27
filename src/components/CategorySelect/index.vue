@@ -24,7 +24,12 @@
 <script>
 export default {
   name: 'CategorySelect',
-  props: ['show'],
+  // props: ['show'],
+  props: {
+    show: {
+      type: Boolean
+    }
+  },
   data() {
     return {
       list1: [], // 一级分类的数据
